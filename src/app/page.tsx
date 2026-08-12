@@ -9,8 +9,9 @@ export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameCount = 240;
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const currentFrame = (index: number) =>
-    `/frames/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
+    `${basePath}/frames/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
 
   useEffect(() => {
     const canvas = canvasRef.current;

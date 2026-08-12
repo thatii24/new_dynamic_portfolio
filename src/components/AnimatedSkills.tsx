@@ -1,14 +1,14 @@
 "use client";
 
 export default function AnimatedSkills() {
-  // Using local SVG files downloaded to public/logos/
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const icons = [
-    { name: "Photoshop", src: "/logos/photoshop.svg", top: "10%", left: "10%", delay: "0s", rotate: "-10deg", size: "w-12 h-12 md:w-16 md:h-16" },
-    { name: "Illustrator", src: "/logos/illustrator.svg", top: "5%", left: "70%", delay: "0.5s", rotate: "15deg", size: "w-10 h-10 md:w-14 md:h-14" },
-    { name: "Premiere Pro", src: "/logos/premierepro.svg", top: "70%", left: "15%", delay: "1s", rotate: "5deg", size: "w-14 h-14 md:w-20 md:h-20" },
-    { name: "Figma", src: "/logos/figma.svg", top: "65%", left: "80%", delay: "1.5s", rotate: "-15deg", size: "w-12 h-12 md:w-16 md:h-16" },
-    { name: "Canva", src: "/logos/canva.svg", top: "85%", left: "45%", delay: "0.2s", rotate: "10deg", size: "w-10 h-10 md:w-14 md:h-14" },
-    { name: "Blender", src: "/logos/blender.svg", top: "20%", left: "85%", delay: "0.8s", rotate: "25deg", size: "w-12 h-12 md:w-16 md:h-16" },
+    { name: "Photoshop", src: `${basePath}/logos/photoshop.svg`, top: "10%", left: "10%", delay: "0s", rotate: "-10deg", size: "w-12 h-12 md:w-16 md:h-16" },
+    { name: "Illustrator", src: `${basePath}/logos/illustrator.svg`, top: "5%", left: "70%", delay: "0.5s", rotate: "15deg", size: "w-10 h-10 md:w-14 md:h-14" },
+    { name: "Premiere Pro", src: `${basePath}/logos/premierepro.svg`, top: "70%", left: "15%", delay: "1s", rotate: "5deg", size: "w-14 h-14 md:w-20 md:h-20" },
+    { name: "Figma", src: `${basePath}/logos/figma.svg`, top: "65%", left: "80%", delay: "1.5s", rotate: "-15deg", size: "w-12 h-12 md:w-16 md:h-16" },
+    { name: "Canva", src: `${basePath}/logos/canva.svg`, top: "85%", left: "45%", delay: "0.2s", rotate: "10deg", size: "w-10 h-10 md:w-14 md:h-14" },
+    { name: "Blender", src: `${basePath}/logos/blender.svg`, top: "20%", left: "85%", delay: "0.8s", rotate: "25deg", size: "w-12 h-12 md:w-16 md:h-16" },
   ];
 
   return (

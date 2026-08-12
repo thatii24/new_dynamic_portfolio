@@ -252,7 +252,7 @@ export default function Home() {
 
             <div className="hidden lg:flex w-[350px] h-[350px] bg-white/5 rounded-sm border border-white/10 items-center justify-center overflow-hidden relative shadow-xl shadow-black/50">
               <img
-                src="/profile-mockup.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/profile-mockup.png`}
                 alt="Workspace"
                 className="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
               />

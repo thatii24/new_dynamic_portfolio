@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -136,27 +137,7 @@ export default function Home() {
             <span className="text-xs uppercase tracking-widest text-white/50 cursor-pointer hover:text-white transition-colors">View All Projects &rarr;</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { num: '01', title: 'Veloce Bikes', desc: 'E-Commerce Website' },
-              { num: '02', title: 'Woodcraft', desc: 'Furniture Website' },
-              { num: '03', title: 'Ursanic', desc: 'Fashion Magazine' },
-            ].map(project => (
-              <div key={project.num} className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-black/40 rounded-sm overflow-hidden mb-6 relative backdrop-blur-sm border border-white/5">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-                  <div className="w-full h-full flex items-center justify-center text-white/20 font-oswald text-4xl">IMAGE</div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl font-oswald text-[#c22026]">{project.num}</span>
-                  <div>
-                    <h4 className="text-lg font-bold uppercase tracking-wider mb-1">{project.title}</h4>
-                    <p className="text-xs uppercase tracking-widest text-white/50">{project.desc}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProjectCarousel />
         </section>
 
         {/* Section 3: Education, Skills & Process */}

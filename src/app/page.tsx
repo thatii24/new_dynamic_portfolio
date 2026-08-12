@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AnimatedSkills from "@/components/AnimatedSkills";
 
@@ -72,10 +73,10 @@ export default function Home() {
           <span>Web Designer</span>
           <span>Digital Creator</span>
         </div>
-        <div className="flex items-center gap-2 pointer-events-auto">
-          <span>Available for Freelance</span>
-          <span className="text-[#c22026] text-xl leading-none">+</span>
-        </div>
+        <Link href="/contact" className="flex items-center gap-2 pointer-events-auto cursor-pointer group">
+          <span className="group-hover:text-white transition-colors">Available for Freelance</span>
+          <span className="text-[#c22026] text-xl leading-none group-hover:rotate-90 transition-transform duration-300">+</span>
+        </Link>
       </header>
 
       {/* UI Overlay Wrapper */}
@@ -135,7 +136,9 @@ export default function Home() {
         <section className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           <div className="flex justify-between items-end border-b border-white/10 pb-4 mb-12">
             <h3 className="text-2xl font-bold uppercase tracking-wider">Selected Projects</h3>
-            <span className="text-xs uppercase tracking-widest text-white/50 cursor-pointer hover:text-white transition-colors">View All Projects &rarr;</span>
+            <Link href="/global" className="text-xs uppercase tracking-widest text-white/50 cursor-pointer hover:text-[#c22026] transition-colors">
+              View Global Map &rarr;
+            </Link>
           </div>
 
           <ProjectCarousel />

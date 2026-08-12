@@ -154,10 +154,10 @@ export default function Home() {
               <h4 className="text-[#c22026] text-xs font-bold uppercase tracking-widest mb-4">Education</h4>
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <div className="font-bold text-sm mb-1">B.Sc. in Visual Communication Design</div>
-                  <div className="text-xs text-white/50">Binus University</div>
+                  <div className="font-bold text-sm mb-1">B.Sc. in Computer Science</div>
+                  <div className="text-xs text-white/50">Trincomalee Campus, Eastern University, Sri Lanka</div>
                 </div>
-                <div className="text-xs text-[#c22026]">2018 - 2022</div>
+                <div className="text-xs text-[#c22026]">2023 - 2027</div>
               </div>
               <div className="flex justify-between items-start mb-8">
                 <div>
@@ -206,7 +206,7 @@ export default function Home() {
                 <p className="text-lg leading-relaxed font-medium">
                   Good design is not just how it looks, but how it works.
                 </p>
-                <div className="mt-6 font-serif italic text-2xl">Rayhan</div>
+                <div className="mt-6 font-serif italic text-2xl">Thatila</div>
               </div>
               <div className="mt-12">
                 <div className="text-[10px] font-bold uppercase tracking-widest mb-1">Let's Create</div>
@@ -225,33 +225,38 @@ export default function Home() {
               <p className="text-xs text-white/50 max-w-xs leading-relaxed mb-8">
                 I'm currently open for new projects and collaborations. Let's create something amazing that drives results.
               </p>
-              <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-[#c22026] cursor-pointer hover:text-white transition-colors w-fit">
-                <div className="w-8 h-8 rounded-full border border-[#c22026] flex items-center justify-center">&rarr;</div>
+              <Link href="/contact" className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-[#c22026] cursor-pointer hover:text-white transition-colors w-fit">
+                <div className="w-8 h-8 rounded-full border border-[#c22026] flex items-center justify-center group-hover:border-white transition-colors">&rarr;</div>
                 Available For Freelance
-              </div>
+              </Link>
             </div>
 
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">✉</div>
-                <span className="text-[11px] text-white/70">hello@rayhanaditya.com</span>
+                <span className="text-[11px] text-white/70">thatilawijayathunga@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">🌐</div>
-                <span className="text-[11px] text-white/70">www.rayhanaditya.com</span>
+                <span className="text-[11px] text-white/70">www.thatilawije.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">📞</div>
-                <span className="text-[11px] text-white/70">+62 812 3456 7890</span>
+                <span className="text-[11px] text-white/70">+94 78 1263 743</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">📍</div>
-                <span className="text-[11px] text-white/70">Jakarta, Indonesia</span>
+                <span className="text-[11px] text-white/70">Kandy,Sri Lanka</span>
               </div>
             </div>
 
-            <div className="hidden lg:flex w-[250px] h-[150px] bg-white/5 rounded-sm border border-white/10 items-center justify-center text-white/20 text-xs">
-              LAPTOP MOCKUP
+            <div className="hidden lg:flex w-[350px] h-[350px] bg-white/5 rounded-sm border border-white/10 items-center justify-center overflow-hidden relative shadow-xl shadow-black/50">
+              <img
+                src="/profile-mockup.png"
+                alt="Workspace"
+                className="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
+              />
+              <div className="absolute inset-0 border border-white/10 pointer-events-none rounded-sm"></div>
             </div>
           </footer>
         </section>

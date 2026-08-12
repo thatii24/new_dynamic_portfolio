@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import AnimatedSkills from "@/components/AnimatedSkills";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -164,13 +165,7 @@ export default function Home() {
               </div>
 
               <h4 className="text-[#c22026] text-xs font-bold uppercase tracking-widest mb-4">Skills</h4>
-              <div className="flex flex-wrap gap-2">
-                {['Web Design', 'UI/UX Design', 'Figma', 'Framer', 'Adobe XD', 'Photoshop', 'Webflow', 'HTML / CSS', 'Javascript'].map(skill => (
-                  <div key={skill} className="text-[10px] font-semibold uppercase tracking-widest border border-white/20 px-3 py-1.5 rounded-sm text-white/70 hover:border-[#c22026] hover:text-[#c22026] transition-colors cursor-default">
-                    {skill}
-                  </div>
-                ))}
-              </div>
+              <AnimatedSkills />
             </div>
 
             {/* Work Process */}

@@ -13,7 +13,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Rayhan Aditya - Portfolio",
+  title: "Thatila Wijayathunga - Portfolio",
   description: "Web Designer & UI/UX Creator",
 };
 

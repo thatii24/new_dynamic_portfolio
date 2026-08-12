@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thatila Wijayathunga - Dynamic Portfolio
 
-## Getting Started
+A modern, highly interactive personal portfolio website designed and built to showcase projects, skills, and freelance availability.
 
-First, run the development server:
+## 🚀 Features
+
+- **Dynamic Interactive Design:** Built with a dark, tech-forward aesthetic featuring glass-morphism, custom scroll animations, and a signature `#c22026` red accent.
+- **Global Projects Map (`/global`):** An interactive, animated 3D-style world map showcasing projects by continent. 
+- **Animated Skills Showcase:** Smooth, continuous scrolling marquees displaying technical proficiencies.
+- **Freelance Contact Portal (`/contact`):** A sleek, dedicated page for project inquiries, budget estimations, and collaboration requests.
+- **Responsive Layout:** fully optimized for both desktop and mobile viewing.
+
+## 💻 Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org) (App Router)
+- **Library:** [React](https://reactjs.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Language:** TypeScript
+- **Typography:** Custom Google Fonts (Inter & Oswald)
+
+## 🛠️ Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the portfolio live.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/page.tsx` - Main landing page containing hero section, skills, and projects overview.
+- `src/app/global/page.tsx` - Dedicated global map showcase.
+- `src/app/contact/page.tsx` - Freelance inquiry form.
+- `src/components/WorldMap.tsx` - Interactive animated world map component.
+- `src/components/AnimatedSkills.tsx` - Scrolling tech stack marquee.
 
-## Learn More
+## 🎨 Design Philosophy
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+"Good design is not just how it looks, but how it works." 
+The interface focuses on micro-interactions, high-contrast readability, and bold typography to create a premium user experience.

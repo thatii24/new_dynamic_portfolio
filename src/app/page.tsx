@@ -68,13 +68,13 @@ export default function Home() {
       />
 
       {/* Top Navbar - Fixed so it stays on all screens */}
-      <header className="fixed top-0 left-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center text-xs uppercase tracking-widest text-white/70 font-semibold pointer-events-none">
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-xs uppercase tracking-widest text-white/70 font-semibold pointer-events-none">
         <div className="flex flex-col pointer-events-auto">
           <span>Web Designer</span>
           <span>Digital Creator</span>
         </div>
         <Link href="/contact" className="flex items-center gap-2 pointer-events-auto cursor-pointer group">
-          <span className="group-hover:text-white transition-colors">Available for Freelance</span>
+          <span className="hidden md:block group-hover:text-white transition-colors">Available for Freelance</span>
           <span className="text-[#c22026] text-xl leading-none group-hover:rotate-90 transition-transform duration-300">+</span>
         </Link>
       </header>
@@ -83,7 +83,7 @@ export default function Home() {
       <div className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col">
 
         {/* Section 1: Hero Section */}
-        <section className="relative w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section className="relative w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           {/* Huge Background Text */}
           {/* <h1 className="absolute top-1/2 left-0 -translate-y-1/2 w-full text-center text-[12vw] font-oswald text-[#970D18]/80 leading-none select-none z-0 tracking-tighter">
             PORTFOLIO
@@ -133,7 +133,7 @@ export default function Home() {
         </section>
 
         {/* Section 2: Selected Projects */}
-        <section className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           <div className="flex justify-between items-end border-b border-white/10 pb-4 mb-12">
             <h3 className="text-2xl font-bold uppercase tracking-wider">Selected Projects</h3>
             <Link href="/global" className="text-xs uppercase tracking-widest text-white/50 cursor-pointer hover:text-[#c22026] transition-colors">
@@ -145,8 +145,8 @@ export default function Home() {
         </section>
 
         {/* Section 3: Education, Skills & Process */}
-        <section className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <section className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Education & Skills */}
             <div className="flex flex-col">
               <h3 className="text-2xl font-bold uppercase tracking-wider mb-8">Education & Skills</h3>
@@ -216,8 +216,18 @@ export default function Home() {
           </div>
         </section>
 
+<<<<<<< Updated upstream
         {/* Section 4: Footer */}
         <section className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
+=======
+        {/* Section 4: Skill Showcase */}
+        <section className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+          <SkillShowcase />
+        </section>
+
+        {/* Section 5: Footer */}
+        <section className="w-full min-h-[50vh] py-32 md:py-0 md:h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
+>>>>>>> Stashed changes
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold uppercase tracking-tight mb-1">Let's Work</h2>

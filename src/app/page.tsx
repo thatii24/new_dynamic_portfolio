@@ -216,18 +216,8 @@ export default function Home() {
           </div>
         </section>
 
-<<<<<<< Updated upstream
         {/* Section 4: Footer */}
         <section className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
-=======
-        {/* Section 4: Skill Showcase */}
-        <section className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
-          <SkillShowcase />
-        </section>
-
-        {/* Section 5: Footer */}
-        <section className="w-full min-h-[50vh] py-32 md:py-0 md:h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
->>>>>>> Stashed changes
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold uppercase tracking-tight mb-1">Let's Work</h2>

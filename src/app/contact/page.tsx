@@ -19,13 +19,13 @@ export default function ContactPage() {
         
         {/* Left Side: Typography & Info */}
         <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-12">
-          <span className="font-serif italic text-3xl md:text-5xl text-white/80 mb-4">Let's create</span>
+          <span className="font-serif italic text-3xl md:text-5xl text-white/80 mb-4">Let&apos;s create</span>
           <h1 className="font-oswald text-6xl md:text-[7rem] font-bold leading-[0.85] text-white tracking-tight uppercase mb-8">
             Something<br />
             <span className="text-[#c22026]">Incredible.</span>
           </h1>
           <p className="text-sm md:text-base text-white/60 max-w-md leading-relaxed mb-12">
-            I'm currently available for freelance projects. Whether you have a specific idea in mind or need help conceptualizing a new digital experience, let's talk about it.
+            I&apos;m currently available for freelance projects. Whether you have a specific idea in mind or need help conceptualizing a new digital experience, let&apos;s talk about it.
           </p>
 
           <div className="flex flex-col gap-6">

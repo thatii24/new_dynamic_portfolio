@@ -204,14 +204,14 @@ export default function Home() {
             {/* Quote Box */}
             <div className="bg-[#970D18] p-10 flex flex-col justify-between rounded-sm h-full">
               <div>
-                <div className="text-4xl font-serif italic text-white/30 mb-4">"</div>
+                <div className="text-4xl font-serif italic text-white/30 mb-4">&quot;</div>
                 <p className="text-lg leading-relaxed font-medium">
                   Good design is not just how it looks, but how it works.
                 </p>
                 <div className="mt-6 font-serif italic text-2xl">Thatila</div>
               </div>
               <div className="mt-12">
-                <div className="text-[10px] font-bold uppercase tracking-widest mb-1">Let's Create</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest mb-1">Let&apos;s Create</div>
                 <div className="text-[10px] font-bold uppercase tracking-widest">Something Great Together</div>
               </div>
             </div>
@@ -227,10 +227,10 @@ export default function Home() {
         <section className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
             <div className="flex flex-col">
-              <h2 className="text-4xl font-bold uppercase tracking-tight mb-1">Let's Work</h2>
+              <h2 className="text-4xl font-bold uppercase tracking-tight mb-1">Let&apos;s Work</h2>
               <h2 className="text-4xl font-bold uppercase tracking-tight mb-6">Together <span className="text-[#c22026]">+</span></h2>
               <p className="text-xs text-white/50 max-w-xs leading-relaxed mb-8">
-                I'm currently open for new projects and collaborations. Let's create something amazing that drives results.
+                I&apos;m currently open for new projects and collaborations. Let&apos;s create something amazing that drives results.
               </p>
               <Link href="/contact" className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-[#c22026] cursor-pointer hover:text-white transition-colors w-fit">
                 <div className="w-8 h-8 rounded-full border border-[#c22026] flex items-center justify-center group-hover:border-white transition-colors">&rarr;</div>

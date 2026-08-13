@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AnimatedSkills from "@/components/AnimatedSkills";
+import SkillShowcase from "@/components/SkillShowcase";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -217,7 +218,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section 4: Footer */}
+        {/* Section 4: Skill Showcase */}
+        <section className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+          <SkillShowcase />
+        </section>
+
+        {/* Section 5: Footer */}
         <section className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
             <div className="flex flex-col">

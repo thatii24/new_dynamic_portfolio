@@ -5,6 +5,7 @@ import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AnimatedSkills from "@/components/AnimatedSkills";
 import WavingCharacter from "@/components/WavingCharacter";
+import SkillShowcase from "@/components/SkillShowcase";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

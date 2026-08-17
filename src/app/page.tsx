@@ -10,8 +10,9 @@ export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameCount = 240;
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const currentFrame = (index: number) =>
-    `/frames/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
+    `${basePath}/frames/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -220,7 +221,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section 4: Footer */}
+        {/* Section 4: Skill Showcase */}
+        <section className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+          <SkillShowcase />
+        </section>
+
+        {/* Section 5: Footer */}
         <section className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
             <div className="flex flex-col">
@@ -256,7 +262,7 @@ export default function Home() {
 
             <div className="hidden lg:flex w-[350px] h-[350px] bg-white/5 rounded-sm border border-white/10 items-center justify-center overflow-hidden relative shadow-xl shadow-black/50">
               <img
-                src="/profile-mockup.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/profile-mockup.png`}
                 alt="Workspace"
                 className="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500"
               />

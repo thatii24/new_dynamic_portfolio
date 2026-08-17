@@ -64,7 +64,7 @@ export default function WorldMap() {
         <div 
           className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-60"
           style={{ 
-            backgroundImage: "url('/world-map-bg.png')",
+            backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ''}/world-map-bg.png')`,
             filter: "grayscale(100%) sepia(100%) hue-rotate(320deg) saturate(300%) brightness(80%) contrast(120%)"
           }}
         />

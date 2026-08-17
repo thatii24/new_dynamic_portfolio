@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AnimatedSkills from "@/components/AnimatedSkills";
+import WavingCharacter from "@/components/WavingCharacter";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -66,6 +67,9 @@ export default function Home() {
         id="scroll-animation"
         className="fixed top-0 left-0 w-screen h-screen object-cover -z-10"
       />
+
+      {/* Waving Character Popup */}
+      <WavingCharacter />
 
       {/* Top Navbar - Fixed so it stays on all screens */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-xs uppercase tracking-widest text-white/70 font-semibold pointer-events-none">

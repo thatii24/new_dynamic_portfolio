@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AnimatedSkills from "@/components/AnimatedSkills";
-import WavingCharacter from "@/components/WavingCharacter";
 import SkillShowcase from "@/components/SkillShowcase";
+import FloatingNavBar from "@/components/FloatingNavBar";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -70,8 +70,8 @@ export default function Home() {
         className="fixed top-0 left-0 w-screen h-screen object-cover -z-10"
       />
 
-      {/* Waving Character Popup */}
-      <WavingCharacter />
+      {/* Floating Pill Navigation Dock */}
+      <FloatingNavBar />
 
       {/* Top Navbar - Fixed so it stays on all screens */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-xs uppercase tracking-widest text-white/70 font-semibold pointer-events-none">
@@ -89,7 +89,7 @@ export default function Home() {
       <div className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col">
 
         {/* Section 1: Hero Section */}
-        <section className="relative w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section id="hero" className="relative w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           {/* Huge Background Text */}
           {/* <h1 className="absolute top-1/2 left-0 -translate-y-1/2 w-full text-center text-[12vw] font-oswald text-[#970D18]/80 leading-none select-none z-0 tracking-tighter">
             PORTFOLIO
@@ -139,7 +139,7 @@ export default function Home() {
         </section>
 
         {/* Section 2: Selected Projects */}
-        <section className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section id="projects" className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           <div className="flex justify-between items-end border-b border-white/10 pb-4 mb-12">
             <h3 className="text-2xl font-bold uppercase tracking-wider">Selected Projects</h3>
             <Link href="/global" className="text-xs uppercase tracking-widest text-white/50 cursor-pointer hover:text-[#c22026] transition-colors">
@@ -151,7 +151,7 @@ export default function Home() {
         </section>
 
         {/* Section 3: Education, Skills & Process */}
-        <section className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section id="process" className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Education & Skills */}
             <div className="flex flex-col">
@@ -223,12 +223,12 @@ export default function Home() {
         </section>
 
         {/* Section 4: Skill Showcase */}
-        <section className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section id="skills" className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
           <SkillShowcase />
         </section>
 
         {/* Section 5: Footer */}
-        <section className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section id="contact" className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold uppercase tracking-tight mb-1">Let&apos;s Work</h2>

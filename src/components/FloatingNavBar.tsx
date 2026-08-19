@@ -196,11 +196,10 @@ export default function FloatingNavBar() {
               <button
                 onClick={() => scrollToSection(item.id)}
                 aria-label={item.label}
-                className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 ${
-                  isActive
+                className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 ${isActive
                     ? "bg-white text-slate-900 shadow-md scale-105 font-bold"
                     : "text-slate-800 dark:text-white/80 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
-                }`}
+                  }`}
               >
                 {item.icon}
                 {isActive && (
@@ -275,11 +274,10 @@ export default function FloatingNavBar() {
                 <button
                   onClick={() => scrollToSection(item.id)}
                   aria-label={item.label}
-                  className={`relative flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${
-                    isActive
+                  className={`relative flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${isActive
                       ? "bg-white text-slate-900 shadow-md font-bold"
                       : "text-slate-800 dark:text-white/70 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
-                  }`}
+                    }`}
                 >
                   {item.icon}
                 </button>

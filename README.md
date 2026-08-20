@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-new--dynamic--portfolio.vercel.app-c22026?style=for-the-badge&logo=vercel&logoColor=white)](https://new-dynamic-portfolio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-new--dynamic--portfolio--k7oiskd7a.vercel.app-c22026?style=for-the-badge&logo=vercel&logoColor=white)](https://new-dynamic-portfolio-k7oiskd7a.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@
   A modern, high-performance personal portfolio built with cutting-edge web technologies, dynamic micro-interactions, and a signature high-contrast cyberpunk/editorial aesthetic.
 </p>
 
-🔗 **Live URL:** [https://new-dynamic-portfolio.vercel.app/](https://new-dynamic-portfolio.vercel.app/)
+🔗 **Live URL:** [https://new-dynamic-portfolio-k7oiskd7a.vercel.app/](https://new-dynamic-portfolio-k7oiskd7a.vercel.app/)
 
 </div>
 
@@ -99,7 +99,7 @@ npm run build
 
 This application is deployed and hosted on **Vercel**:
 
-👉 **[https://new-dynamic-portfolio.vercel.app/](https://new-dynamic-portfolio.vercel.app/)**
+👉 **[https://new-dynamic-portfolio-k7oiskd7a.vercel.app/](https://new-dynamic-portfolio-k7oiskd7a.vercel.app/)**
 
 ---
 

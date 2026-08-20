@@ -86,33 +86,28 @@ export default function Home() {
       </header>
 
       {/* UI Overlay Wrapper */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col gap-12 sm:gap-16 md:gap-24 lg:gap-28">
 
         {/* Section 1: Hero Section */}
-        <section id="hero" className="relative w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
-          {/* Huge Background Text */}
-          {/* <h1 className="absolute top-1/2 left-0 -translate-y-1/2 w-full text-center text-[12vw] font-oswald text-[#970D18]/80 leading-none select-none z-0 tracking-tighter">
-            PORTFOLIO
-          </h1> */}
-
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full gap-12 mt-12">
+        <section id="hero" className="relative w-full min-h-screen py-24 sm:py-28 md:py-32 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full gap-10 md:gap-12 mt-8 md:mt-12">
             {/* Left Content */}
             <div className="flex flex-col max-w-md">
               <span className="font-serif italic text-3xl md:text-5xl text-white/90 mb-2">
                 Hello, I&apos;m
               </span>
-              <h2 className="font-oswald text-6xl md:text-[5rem] font-bold leading-[0.85] text-white tracking-tight uppercase">
+              <h2 className="font-oswald text-5xl sm:text-6xl md:text-[5rem] font-bold leading-[0.88] text-white tracking-tight uppercase">
                 Thatila<br />Wijayathunga
               </h2>
-              <div className="mt-8 text-[#c22026] font-bold text-xl md:text-2xl uppercase tracking-wide">
+              <div className="mt-6 md:mt-8 text-[#c22026] font-bold text-xl md:text-2xl uppercase tracking-wide">
                 Web Designer &<br />UI/UX Creator
               </div>
-              <p className="mt-6 text-white/60 text-sm md:text-base leading-relaxed">
+              <p className="mt-5 md:mt-6 text-white/60 text-sm md:text-base leading-relaxed">
                 I design and build stylish, user-focused web experiences that
                 combine creativity with strategy. Passionate about clean design,
                 smooth interactions, and details that make a difference.
               </p>
-              <div className="mt-8 flex items-center gap-3 text-xs uppercase tracking-widest text-white/70">
+              <div className="mt-6 md:mt-8 flex items-center gap-3 text-xs uppercase tracking-widest text-white/70">
                 <div className="w-8 h-8 rounded-full bg-[#c22026] flex items-center justify-center">
                   <span className="text-white text-lg leading-none">+</span>
                 </div>
@@ -120,28 +115,34 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Stats */}
-            <div className="flex flex-col gap-12 text-right">
-              <div className="flex items-center justify-end gap-4">
-                <span className="text-5xl md:text-6xl font-oswald text-[#c22026]">3+</span>
-                <span className="text-xs uppercase tracking-widest text-white/70 text-left w-24">Years<br />Experience</span>
+            {/* Right Stats - Horizontal on mobile, vertical column on desktop */}
+            <div className="flex flex-row md:flex-col items-center justify-between sm:justify-around md:justify-end gap-3 sm:gap-6 md:gap-12 w-full md:w-auto pt-6 md:pt-0 border-t md:border-t-0 border-white/10 text-left md:text-right">
+              <div className="flex flex-col sm:flex-row md:flex-row items-center justify-center md:justify-end gap-1 sm:gap-3 md:gap-4 text-center sm:text-left">
+                <span className="text-4xl sm:text-5xl md:text-6xl font-oswald text-[#c22026] leading-none">3+</span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-white/70 text-center sm:text-left leading-tight sm:w-24">
+                  Years<br className="hidden sm:block" /> Experience
+                </span>
               </div>
-              <div className="flex items-center justify-end gap-4">
-                <span className="text-5xl md:text-6xl font-oswald text-[#c22026]">40+</span>
-                <span className="text-xs uppercase tracking-widest text-white/70 text-left w-24">Projects<br />Completed</span>
+              <div className="flex flex-col sm:flex-row md:flex-row items-center justify-center md:justify-end gap-1 sm:gap-3 md:gap-4 text-center sm:text-left">
+                <span className="text-4xl sm:text-5xl md:text-6xl font-oswald text-[#c22026] leading-none">40+</span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-white/70 text-center sm:text-left leading-tight sm:w-24">
+                  Projects<br className="hidden sm:block" /> Completed
+                </span>
               </div>
-              <div className="flex items-center justify-end gap-4">
-                <span className="text-5xl md:text-6xl font-oswald text-[#c22026]">20+</span>
-                <span className="text-xs uppercase tracking-widest text-white/70 text-left w-24">Happy<br />Clients</span>
+              <div className="flex flex-col sm:flex-row md:flex-row items-center justify-center md:justify-end gap-1 sm:gap-3 md:gap-4 text-center sm:text-left">
+                <span className="text-4xl sm:text-5xl md:text-6xl font-oswald text-[#c22026] leading-none">20+</span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-white/70 text-center sm:text-left leading-tight sm:w-24">
+                  Happy<br className="hidden sm:block" /> Clients
+                </span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Section 2: Selected Projects */}
-        <section id="projects" className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
-          <div className="flex justify-between items-end border-b border-white/10 pb-4 mb-12">
-            <h3 className="text-2xl font-bold uppercase tracking-wider">Selected Projects</h3>
+        <section id="projects" className="w-full min-h-screen py-20 sm:py-24 md:py-28 flex flex-col justify-center px-4 sm:px-6 md:px-12 snap-center">
+          <div className="flex justify-between items-end border-b border-white/10 pb-4 mb-6 sm:mb-8 md:mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider">Selected Projects</h3>
             <Link href="/global" className="text-xs uppercase tracking-widest text-white/50 cursor-pointer hover:text-[#c22026] transition-colors">
               View Global Map &rarr;
             </Link>
@@ -151,11 +152,11 @@ export default function Home() {
         </section>
 
         {/* Section 3: Education, Skills & Process */}
-        <section id="process" className="w-full min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+        <section id="process" className="w-full min-h-screen py-20 sm:py-24 md:py-28 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
             {/* Education & Skills */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8">Education & Skills</h3>
+              <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-6 sm:mb-8">Education & Skills</h3>
 
               <h4 className="text-[#c22026] text-xs font-bold uppercase tracking-widest mb-4">Education</h4>
               <div className="flex justify-between items-start mb-4">
@@ -179,7 +180,7 @@ export default function Home() {
 
             {/* Work Process */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold uppercase tracking-wider mb-8">Work Process</h3>
+              <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-6 sm:mb-8">Work Process</h3>
 
               <div className="flex flex-col gap-6 relative">
                 <div className="absolute left-[39px] top-4 bottom-4 w-px bg-white/10 z-0" />
@@ -206,7 +207,7 @@ export default function Home() {
             </div>
 
             {/* Quote Box */}
-            <div className="bg-[#970D18] p-10 flex flex-col justify-between rounded-sm h-full">
+            <div className="bg-[#970D18] p-8 sm:p-10 flex flex-col justify-between rounded-2xl md:rounded-sm min-h-[300px] h-full shadow-2xl">
               <div>
                 <div className="text-4xl font-serif italic text-white/30 mb-4">&quot;</div>
                 <p className="text-lg leading-relaxed font-medium">
@@ -214,7 +215,7 @@ export default function Home() {
                 </p>
                 <div className="mt-6 font-serif italic text-2xl">Thatila</div>
               </div>
-              <div className="mt-12">
+              <div className="mt-10 sm:mt-12">
                 <div className="text-[10px] font-bold uppercase tracking-widest mb-1">Let&apos;s Create</div>
                 <div className="text-[10px] font-bold uppercase tracking-widest">Something Great Together</div>
               </div>
@@ -223,17 +224,17 @@ export default function Home() {
         </section>
 
         {/* Section 4: Skill Showcase */}
-        <section id="skills" className="w-full h-screen flex flex-col justify-center px-6 md:px-12 snap-center">
+        <section id="skills" className="w-full min-h-screen py-20 sm:py-24 md:py-28 flex flex-col justify-center px-6 md:px-12 snap-center">
           <SkillShowcase />
         </section>
 
         {/* Section 5: Footer */}
-        <section id="contact" className="w-full h-[50vh] flex flex-col justify-center px-6 md:px-12 snap-center">
-          <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-10 rounded-sm gap-12">
-            <div className="flex flex-col">
-              <h2 className="text-4xl font-bold uppercase tracking-tight mb-1">Let&apos;s Work</h2>
-              <h2 className="text-4xl font-bold uppercase tracking-tight mb-6">Together <span className="text-[#c22026]">+</span></h2>
-              <p className="text-xs text-white/50 max-w-xs leading-relaxed mb-8">
+        <section id="contact" className="w-full min-h-[70vh] py-20 sm:py-24 md:py-28 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-8 sm:p-10 rounded-2xl md:rounded-sm gap-8 sm:gap-12">
+            <div className="flex flex-col w-full md:w-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight mb-1">Let&apos;s Work</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight mb-4 sm:mb-6">Together <span className="text-[#c22026]">+</span></h2>
+              <p className="text-xs text-white/50 max-w-xs leading-relaxed mb-6 sm:mb-8">
                 I&apos;m currently open for new projects and collaborations. Let&apos;s create something amazing that drives results.
               </p>
               <Link href="/contact" className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-[#c22026] cursor-pointer hover:text-white transition-colors w-fit">
@@ -242,22 +243,22 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3.5 sm:gap-4 w-full md:w-auto">
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">✉</div>
-                <span className="text-[11px] text-white/70">thatilawijayathunga@gmail.com</span>
+                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs shrink-0">✉</div>
+                <span className="text-[11px] text-white/70 break-all">thatilawijayathunga@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">🌐</div>
+                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs shrink-0">🌐</div>
                 <span className="text-[11px] text-white/70">www.thatilawije.com</span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">📞</div>
+                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs shrink-0">📞</div>
                 <span className="text-[11px] text-white/70">+94 78 1263 743</span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs">📍</div>
-                <span className="text-[11px] text-white/70">Kandy,Sri Lanka</span>
+                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs shrink-0">📍</div>
+                <span className="text-[11px] text-white/70">Kandy, Sri Lanka</span>
               </div>
             </div>
 

@@ -183,11 +183,10 @@ export default function ProjectCarousel() {
               }}
             >
               <div
-                className={`w-[78vw] max-w-[300px] sm:w-[330px] sm:max-w-none md:w-[420px] lg:w-[480px] xl:w-[540px] aspect-[3/4] bg-[#0c0c0e] rounded-3xl overflow-hidden relative transition-all duration-500 flex flex-col justify-end p-6 sm:p-8 lg:p-10 group ${
-                  isActive
+                className={`w-[78vw] max-w-[300px] sm:w-[330px] sm:max-w-none md:w-[420px] lg:w-[480px] xl:w-[540px] aspect-[3/4] bg-[#0c0c0e] rounded-3xl overflow-hidden relative transition-all duration-500 flex flex-col justify-end p-6 sm:p-8 lg:p-10 group ${isActive
                     ? "border border-white/20 shadow-[0_0_35px_rgba(194,32,38,0.25)] ring-1 ring-white/10"
                     : "border border-white/10 opacity-60 hover:opacity-80"
-                }`}
+                  }`}
               >
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10 pointer-events-none" />
@@ -232,11 +231,10 @@ export default function ProjectCarousel() {
           }}
           disabled={activeIndex === 0}
           aria-label="Previous project"
-          className={`absolute left-2 sm:left-4 lg:left-8 z-40 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${
-            activeIndex === 0
+          className={`absolute left-2 sm:left-4 lg:left-8 z-40 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${activeIndex === 0
               ? "opacity-20 cursor-not-allowed"
               : "opacity-80 hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-black/90 hover:border-[#c22026]/50"
-          }`}
+            }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -256,11 +254,10 @@ export default function ProjectCarousel() {
           }}
           disabled={activeIndex === projects.length - 1}
           aria-label="Next project"
-          className={`absolute right-2 sm:right-4 lg:right-8 z-40 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${
-            activeIndex === projects.length - 1
+          className={`absolute right-2 sm:right-4 lg:right-8 z-40 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${activeIndex === projects.length - 1
               ? "opacity-20 cursor-not-allowed"
               : "opacity-80 hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-black/90 hover:border-[#c22026]/50"
-          }`}
+            }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -296,11 +293,10 @@ export default function ProjectCarousel() {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               aria-label={`Go to project ${idx + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                idx === activeIndex
+              className={`h-2 rounded-full transition-all duration-300 ${idx === activeIndex
                   ? "bg-[#c22026] w-8 shadow-sm shadow-[#c22026]/50"
                   : "bg-white/30 hover:bg-white/60 w-2"
-              }`}
+                }`}
             />
           ))}
         </div>

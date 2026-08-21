@@ -19,7 +19,9 @@
   }
 }
 
+html,
 body {
   background: transparent;
   color: var(--foreground);
+  overflow-x: hidden;
 }

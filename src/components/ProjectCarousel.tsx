@@ -123,7 +123,7 @@ export default function ProjectCarousel() {
         onMouseMove={onMouseMove}
         onMouseUp={onMouseUp}
         onMouseLeave={onMouseUp}
-        className="relative w-full h-[460px] sm:h-[500px] md:h-[580px] flex items-center justify-center overflow-hidden touch-pan-y select-none cursor-grab active:cursor-grabbing"
+        className="relative w-full h-[460px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[760px] flex items-center justify-center overflow-visible touch-pan-y select-none cursor-grab active:cursor-grabbing"
         style={{ perspective: isMobile ? "900px" : "1200px" }}
       >
         {projects.map((proj, idx) => {
@@ -146,17 +146,17 @@ export default function ProjectCarousel() {
             scale = 1;
           } else if (distance < 0) {
             // Cards to the left
-            translateX = isMobile ? -58 * Math.abs(distance) : -65 * Math.abs(distance);
-            translateZ = isMobile ? -140 * Math.abs(distance) : -240 * Math.abs(distance);
-            rotateY = isMobile ? 22 : 35;
+            translateX = isMobile ? -62 * Math.abs(distance) : -76 * Math.abs(distance);
+            translateZ = isMobile ? -150 * Math.abs(distance) : -260 * Math.abs(distance);
+            rotateY = isMobile ? 22 : 32;
             opacity = Math.max(0, 1 - Math.abs(distance) * 0.35);
             zIndex = 50 - Math.abs(distance);
             scale = Math.max(0.7, 1 - Math.abs(distance) * 0.12);
           } else {
             // Cards to the right
-            translateX = isMobile ? 58 * Math.abs(distance) : 65 * Math.abs(distance);
-            translateZ = isMobile ? -140 * Math.abs(distance) : -240 * Math.abs(distance);
-            rotateY = isMobile ? -22 : -35;
+            translateX = isMobile ? 62 * Math.abs(distance) : 76 * Math.abs(distance);
+            translateZ = isMobile ? -150 * Math.abs(distance) : -260 * Math.abs(distance);
+            rotateY = isMobile ? -22 : -32;
             opacity = Math.max(0, 1 - Math.abs(distance) * 0.35);
             zIndex = 50 - Math.abs(distance);
             scale = Math.max(0.7, 1 - Math.abs(distance) * 0.12);
@@ -183,39 +183,39 @@ export default function ProjectCarousel() {
               }}
             >
               <div
-                className={`w-[78vw] max-w-[300px] sm:w-[330px] md:w-[380px] aspect-[3/4] bg-black/70 rounded-3xl overflow-hidden relative backdrop-blur-2xl border transition-all duration-300 shadow-2xl flex flex-col justify-end p-6 sm:p-8 group ${
+                className={`w-[78vw] max-w-[300px] sm:w-[330px] sm:max-w-none md:w-[420px] lg:w-[480px] xl:w-[540px] aspect-[3/4] bg-[#0c0c0e] rounded-3xl overflow-hidden relative transition-all duration-500 flex flex-col justify-end p-6 sm:p-8 lg:p-10 group ${
                   isActive
-                    ? "border-white/30 shadow-[0_15px_40px_rgba(0,0,0,0.8)] ring-1 ring-[#c22026]/40"
-                    : "border-white/10 hover:border-white/20"
+                    ? "border border-white/20 shadow-[0_0_35px_rgba(194,32,38,0.25)] ring-1 ring-white/10"
+                    : "border border-white/10 opacity-60 hover:opacity-80"
                 }`}
               >
                 {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10 pointer-events-none" />
 
                 {/* Subtle top ambient glow on active */}
                 {isActive && (
-                  <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#c22026]/20 to-transparent pointer-events-none z-10" />
+                  <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#c22026]/20 via-[#c22026]/5 to-transparent pointer-events-none z-10" />
                 )}
 
                 {/* Center Background Watermark */}
-                <div className="absolute inset-0 flex items-center justify-center font-oswald text-6xl sm:text-7xl text-white/5 z-0 group-hover:text-white/10 transition-colors">
+                <div className="absolute inset-0 flex items-center justify-center font-oswald text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-white/5 z-0 group-hover:text-white/10 transition-colors">
                   {proj.num}
                 </div>
 
                 {/* Content Overlay */}
                 <div className="relative z-20 transform transition-transform duration-500 group-hover:translate-y-[-6px]">
                   {proj.tag && (
-                    <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-[#c22026]/20 border border-[#c22026]/40 text-[#c22026] mb-3">
+                    <span className="inline-block px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider bg-[#c22026]/20 border border-[#c22026]/40 text-[#c22026] mb-3">
                       {proj.tag}
                     </span>
                   )}
-                  <span className="text-5xl sm:text-6xl font-oswald text-[#c22026] mb-1.5 block leading-none">
+                  <span className="text-5xl sm:text-6xl lg:text-7xl font-oswald text-[#c22026] mb-1.5 block leading-none">
                     {proj.num}
                   </span>
-                  <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-1.5 text-white">
+                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold uppercase tracking-wider mb-1.5 text-white">
                     {proj.title}
                   </h4>
-                  <p className="text-xs uppercase tracking-widest text-white/60">
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-white/60">
                     {proj.desc}
                   </p>
                 </div>
@@ -232,7 +232,7 @@ export default function ProjectCarousel() {
           }}
           disabled={activeIndex === 0}
           aria-label="Previous project"
-          className={`absolute left-2 sm:left-4 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${
+          className={`absolute left-2 sm:left-4 lg:left-8 z-40 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${
             activeIndex === 0
               ? "opacity-20 cursor-not-allowed"
               : "opacity-80 hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-black/90 hover:border-[#c22026]/50"
@@ -240,7 +240,7 @@ export default function ProjectCarousel() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 sm:w-6 sm:h-6"
+            className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -256,7 +256,7 @@ export default function ProjectCarousel() {
           }}
           disabled={activeIndex === projects.length - 1}
           aria-label="Next project"
-          className={`absolute right-2 sm:right-4 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${
+          className={`absolute right-2 sm:right-4 lg:right-8 z-40 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all ${
             activeIndex === projects.length - 1
               ? "opacity-20 cursor-not-allowed"
               : "opacity-80 hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-black/90 hover:border-[#c22026]/50"
@@ -264,7 +264,7 @@ export default function ProjectCarousel() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 sm:w-6 sm:h-6"
+            className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

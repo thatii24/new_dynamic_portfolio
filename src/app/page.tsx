@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
-import AnimatedSkills from "@/components/AnimatedSkills";
+import AboutExpertise from "@/components/AboutExpertise";
 import SkillShowcase from "@/components/SkillShowcase";
 import FloatingNavBar from "@/components/FloatingNavBar";
 
@@ -228,76 +228,9 @@ export default function Home() {
           <ProjectCarousel />
         </section>
 
-        {/* Section 3: Education, Skills & Process */}
+        {/* Section 3: About & Expertise */}
         <section id="process" className="w-full min-h-screen py-20 sm:py-24 md:py-28 flex flex-col justify-center px-6 md:px-12 snap-center">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
-            {/* Education & Skills */}
-            <div className="flex flex-col">
-              <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-6 sm:mb-8">Education & Skills</h3>
-
-              <h4 className="text-[#c22026] text-xs font-bold uppercase tracking-widest mb-4">Education</h4>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <div className="font-bold text-sm mb-1">B.Sc. in Computer Science</div>
-                  <div className="text-xs text-white/50">Trincomalee Campus, Eastern University, Sri Lanka</div>
-                </div>
-                <div className="text-xs text-[#c22026]">2023 - 2027</div>
-              </div>
-              <div className="flex justify-between items-start mb-8">
-                <div>
-                  <div className="font-bold text-sm mb-1">UI/UX Design Certification</div>
-                  <div className="text-xs text-white/50">Google Career Certificates</div>
-                </div>
-                <div className="text-xs text-[#c22026]">2023</div>
-              </div>
-
-              <h4 className="text-[#c22026] text-xs font-bold uppercase tracking-widest mb-4">Skills</h4>
-              <AnimatedSkills />
-            </div>
-
-            {/* Work Process */}
-            <div className="flex flex-col">
-              <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-6 sm:mb-8">Work Process</h3>
-
-              <div className="flex flex-col gap-6 relative">
-                <div className="absolute left-[39px] top-4 bottom-4 w-px bg-white/10 z-0" />
-
-                {[
-                  { num: '01', title: 'Discover', desc: 'Understanding goals and requirements.', icon: '🔍' },
-                  { num: '02', title: 'Ideate', desc: 'Planning and creating the right concept.', icon: '💡' },
-                  { num: '03', title: 'Design', desc: 'Crafting visual design with focus on UX.', icon: '✏️' },
-                  { num: '04', title: 'Develop', desc: 'Building high-performing websites.', icon: '</>' },
-                  { num: '05', title: 'Deliver', desc: 'Testing, optimizing, and launching.', icon: '🚀' },
-                ].map(step => (
-                  <div key={step.num} className="flex gap-4 items-start relative z-10">
-                    <span className="text-[#c22026] font-oswald text-xl mt-1">{step.num}</span>
-                    <div className="w-12 h-12 rounded-full border border-white/20 bg-black/60 backdrop-blur-md flex items-center justify-center shrink-0">
-                      {step.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-[#c22026] font-bold text-xs uppercase tracking-widest mb-1 mt-1">{step.title}</h4>
-                      <p className="text-[11px] text-white/60 leading-relaxed max-w-[200px]">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quote Box */}
-            <div className="bg-[#970D18] p-8 sm:p-10 flex flex-col justify-between rounded-2xl md:rounded-sm min-h-[300px] h-full shadow-2xl">
-              <div>
-                <div className="text-4xl font-serif italic text-white/30 mb-4">&quot;</div>
-                <p className="text-lg leading-relaxed font-medium">
-                  Good design is not just how it looks, but how it works.
-                </p>
-                <div className="mt-6 font-serif italic text-2xl">Thatila</div>
-              </div>
-              <div className="mt-10 sm:mt-12">
-                <div className="text-[10px] font-bold uppercase tracking-widest mb-1">Let&apos;s Create</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest">Something Great Together</div>
-              </div>
-            </div>
-          </div>
+          <AboutExpertise />
         </section>
 
         {/* Section 4: Skill Showcase */}

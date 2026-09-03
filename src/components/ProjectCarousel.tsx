@@ -204,17 +204,17 @@ export default function ProjectCarousel() {
                 {/* Content Overlay */}
                 <div className="relative z-20 transform transition-transform duration-500 group-hover:translate-y-[-6px]">
                   {proj.tag && (
-                    <span className="inline-block px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider bg-[#c22026]/20 border border-[#c22026]/40 text-[#c22026] mb-3">
+                    <span className="inline-block px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-[#ff3b47]/15 border border-[#ff3b47]/50 text-[#ff4d5a] mb-3 shadow-[0_0_10px_rgba(255,59,71,0.2)]">
                       {proj.tag}
                     </span>
                   )}
-                  <span className="text-5xl sm:text-6xl lg:text-7xl font-oswald text-[#c22026] mb-1.5 block leading-none">
+                  <span className="text-5xl sm:text-6xl lg:text-7xl font-oswald text-[#ff3b47] mb-1.5 block leading-none drop-shadow-[0_0_15px_rgba(255,59,71,0.4)]">
                     {proj.num}
                   </span>
                   <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold uppercase tracking-wider mb-1.5 text-white">
                     {proj.title}
                   </h4>
-                  <p className="text-xs sm:text-sm uppercase tracking-widest text-white/60">
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-white/90 font-medium">
                     {proj.desc}
                   </p>
                 </div>

@@ -257,36 +257,36 @@ export default function AnimeLoader({
       <div className="absolute inset-0 pointer-events-none z-20 opacity-20 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.8)_2px,rgba(0,0,0,0.8)_4px)]" />
 
       {/* Decorative Anime HUD Corner Brackets */}
-      <div className="absolute top-6 left-6 z-30 pointer-events-none hidden sm:flex flex-col gap-1 text-[9px] font-mono text-white/40 tracking-widest uppercase">
+      <div className="absolute top-6 left-6 z-30 pointer-events-none hidden sm:flex flex-col gap-1 text-[10px] font-mono text-white/90 tracking-widest uppercase">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 border-t-2 border-l-2 border-[#c22026]" />
-          <span>PORTFOLIO_SYSTEM // 覚醒</span>
+          <span className="w-2.5 h-2.5 border-t-2 border-l-2 border-[#ff3b47] shadow-[0_0_8px_#ff3b47]" />
+          <span className="text-white font-semibold">PORTFOLIO_SYSTEM // 覚醒</span>
         </div>
-        <span className="text-[#c22026]/80 text-[10px] pl-3">THATILA WIJAYATHUNGA</span>
+        <span className="text-[#ff4d5a] font-bold text-[11px] pl-3 drop-shadow-[0_0_8px_rgba(255,77,90,0.5)]">THATILA WIJAYATHUNGA</span>
       </div>
 
-      <div className="absolute top-6 right-6 z-30 pointer-events-none hidden sm:flex flex-col items-end gap-1 text-[9px] font-mono text-white/40 tracking-widest uppercase">
+      <div className="absolute top-6 right-6 z-30 pointer-events-none hidden sm:flex flex-col items-end gap-1 text-[10px] font-mono text-white/90 tracking-widest uppercase">
         <div className="flex items-center gap-2">
-          <span>SEC_PROTOCOL // 限界突破</span>
-          <span className="w-2 h-2 border-t-2 border-r-2 border-[#c22026]" />
+          <span className="text-white font-semibold">SEC_PROTOCOL // 限界突破</span>
+          <span className="w-2.5 h-2.5 border-t-2 border-r-2 border-[#ff3b47] shadow-[0_0_8px_#ff3b47]" />
         </div>
-        <span className="text-white/60 pr-3">MODE: ACTIVE DESIGNER</span>
+        <span className="text-white font-bold pr-3">MODE: ACTIVE DESIGNER</span>
       </div>
 
-      <div className="absolute bottom-6 left-6 z-30 pointer-events-none hidden sm:flex flex-col gap-1 text-[9px] font-mono text-white/40 tracking-widest uppercase">
+      <div className="absolute bottom-6 left-6 z-30 pointer-events-none hidden sm:flex flex-col gap-1 text-[10px] font-mono text-white/90 tracking-widest uppercase">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 border-b-2 border-l-2 border-[#c22026]" />
-          <span>LOC: 7.2906° N, 80.6337° E</span>
+          <span className="w-2.5 h-2.5 border-b-2 border-l-2 border-[#ff3b47] shadow-[0_0_8px_#ff3b47]" />
+          <span className="text-white font-semibold">LOC: 7.2906° N, 80.6337° E</span>
         </div>
-        <span className="text-white/40 pl-3">DIGITAL EXPERIENCE v2.4</span>
+        <span className="text-white/80 font-medium pl-3">DIGITAL EXPERIENCE v2.4</span>
       </div>
 
-      <div className="absolute bottom-6 right-6 z-30 pointer-events-none hidden sm:flex flex-col items-end gap-1 text-[9px] font-mono text-white/40 tracking-widest uppercase">
+      <div className="absolute bottom-6 right-6 z-30 pointer-events-none hidden sm:flex flex-col items-end gap-1 text-[10px] font-mono text-white/90 tracking-widest uppercase">
         <div className="flex items-center gap-2">
-          <span>STATUS: INITIALIZING</span>
-          <span className="w-2 h-2 border-b-2 border-r-2 border-[#c22026]" />
+          <span className="text-white font-semibold">STATUS: INITIALIZING</span>
+          <span className="w-2.5 h-2.5 border-b-2 border-r-2 border-[#ff3b47] shadow-[0_0_8px_#ff3b47]" />
         </div>
-        <span className="text-[#c22026] font-bold pr-3">CANVAS 240 FPS</span>
+        <span className="text-[#ff3b47] font-bold pr-3 drop-shadow-[0_0_8px_#ff3b47]">CANVAS 240 FPS</span>
       </div>
 
       {/* Central Anime Core Loader Content */}
@@ -295,9 +295,9 @@ export default function AnimeLoader({
         className="relative z-30 flex flex-col items-center justify-center px-6 max-w-lg w-full text-center"
       >
         {/* Japanese Top Kanji Tag */}
-        <div className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#c22026]/40 bg-[#c22026]/10 backdrop-blur-md">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#c22026] animate-pulse shadow-[0_0_8px_#c22026]" />
-          <span className="text-[10px] sm:text-xs font-mono tracking-widest text-white/90 uppercase">
+        <div className="mb-6 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#ff3b47]/60 bg-[#ff3b47]/15 backdrop-blur-md shadow-[0_0_15px_rgba(255,59,71,0.25)]">
+          <span className="w-2 h-2 rounded-full bg-[#ff3b47] animate-pulse shadow-[0_0_10px_#ff3b47]" />
+          <span className="text-[11px] sm:text-xs font-mono font-semibold tracking-widest text-white uppercase drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]">
             システム起動中 // SYSTEM INITIALIZING
           </span>
         </div>
@@ -307,7 +307,7 @@ export default function AnimeLoader({
           {/* Outer Rotating Cyber Ring */}
           <svg
             ref={ring1Ref}
-            className="absolute inset-0 w-full h-full text-[#c22026]/50"
+            className="absolute inset-0 w-full h-full text-[#ff3b47]/70"
             viewBox="0 0 200 200"
           >
             <circle
@@ -326,22 +326,22 @@ export default function AnimeLoader({
               fill="none"
               stroke="currentColor"
               strokeWidth="0.75"
-              strokeOpacity="0.3"
+              strokeOpacity="0.5"
             />
             <path
               d="M 100 6 A 94 94 0 0 1 194 100"
               fill="none"
-              stroke="#ff2a3b"
-              strokeWidth="3"
+              stroke="#ff3b47"
+              strokeWidth="3.5"
               strokeLinecap="round"
-              className="drop-shadow-[0_0_8px_#ff2a3b]"
+              className="drop-shadow-[0_0_12px_#ff3b47]"
             />
           </svg>
 
           {/* Inner Counter-Rotating Reticle Ring */}
           <svg
             ref={ring2Ref}
-            className="absolute w-32 h-32 sm:w-40 sm:h-40 text-white/40"
+            className="absolute w-32 h-32 sm:w-40 sm:h-40 text-white/60"
             viewBox="0 0 160 160"
           >
             <circle
@@ -353,52 +353,53 @@ export default function AnimeLoader({
               strokeWidth="1"
               strokeDasharray="6 6"
             />
-            <line x1="80" y1="0" x2="80" y2="15" stroke="#c22026" strokeWidth="2" />
-            <line x1="80" y1="145" x2="80" y2="160" stroke="#c22026" strokeWidth="2" />
-            <line x1="0" y1="80" x2="15" y2="80" stroke="#c22026" strokeWidth="2" />
-            <line x1="145" y1="80" x2="160" y2="80" stroke="#c22026" strokeWidth="2" />
+            <line x1="80" y1="0" x2="80" y2="15" stroke="#ff3b47" strokeWidth="2.5" />
+            <line x1="80" y1="145" x2="80" y2="160" stroke="#ff3b47" strokeWidth="2.5" />
+            <line x1="0" y1="80" x2="15" y2="80" stroke="#ff3b47" strokeWidth="2.5" />
+            <line x1="145" y1="80" x2="160" y2="80" stroke="#ff3b47" strokeWidth="2.5" />
           </svg>
 
           {/* Center Glow Aura Pulse */}
-          <div className="absolute w-24 h-24 rounded-full bg-[#c22026]/20 blur-xl animate-pulse" />
+          <div className="absolute w-24 h-24 rounded-full bg-[#ff3b47]/25 blur-xl animate-pulse" />
 
           {/* Core Percentage Display */}
           <div className="relative flex flex-col items-center justify-center">
-            <span className="font-oswald text-4xl sm:text-5xl font-bold tracking-tighter text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+            <span className="font-oswald text-5xl sm:text-6xl font-bold tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]">
               {progress.toString().padStart(2, "0")}
-              <span className="text-xl sm:text-2xl text-[#c22026] ml-1">%</span>
+              <span className="text-2xl sm:text-3xl text-[#ff3b47] ml-1 drop-shadow-[0_0_12px_#ff3b47]">%</span>
             </span>
-            <span className="text-[9px] font-mono text-white/50 uppercase tracking-widest mt-0.5">
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold text-white uppercase tracking-widest mt-0.5 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
               同期率 // SYNC
             </span>
           </div>
         </div>
 
         {/* Dynamic Glowing Anime Progress Bar */}
-        <div className="w-full max-w-xs sm:max-w-sm flex flex-col gap-2">
-          <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden p-[1px] border border-white/20">
+        <div className="w-full max-w-xs sm:max-w-sm flex flex-col gap-2.5">
+          <div className="relative w-full h-2.5 bg-white/15 rounded-full overflow-hidden p-[1px] border border-white/30">
             <div
-              className="h-full bg-gradient-to-r from-[#850b10] via-[#c22026] to-[#ff4d5a] rounded-full transition-all duration-150 ease-out shadow-[0_0_12px_#ff2a3b]"
+              className="h-full bg-gradient-to-r from-[#b3121b] via-[#ff3b47] to-[#ffffff] rounded-full transition-all duration-150 ease-out shadow-[0_0_16px_#ff3b47]"
               style={{ width: `${progress}%` }}
             />
           </div>
 
           {/* HUD Status Text Feed */}
-          <div className="flex justify-between items-center text-[10px] sm:text-xs font-mono text-white/70 tracking-wider">
-            <span className="text-[#c22026] font-semibold truncate pr-2">
-              &gt; {statusText}
+          <div className="flex justify-between items-center text-xs font-mono tracking-wider">
+            <span className="text-white font-semibold truncate pr-2 flex items-center gap-1.5">
+              <span className="text-[#ff3b47] font-bold">&gt;</span>
+              <span className="text-[#ff4d5a] font-bold drop-shadow-[0_0_6px_rgba(255,77,90,0.5)]">{statusText}</span>
             </span>
-            <span className="text-white/40 shrink-0">
+            <span className="text-white font-bold shrink-0 bg-white/10 px-1.5 py-0.5 rounded text-[10px]">
               [{progress}/100]
             </span>
           </div>
         </div>
 
         {/* Bottom Anime Subtitle */}
-        <div className="mt-8 text-[11px] font-mono tracking-widest text-white/30 uppercase flex items-center gap-3">
-          <span className="h-[1px] w-6 bg-white/20" />
-          <span>CREATIVE DEVELOPER PORTFOLIO</span>
-          <span className="h-[1px] w-6 bg-white/20" />
+        <div className="mt-8 text-xs font-mono font-semibold tracking-widest text-white/90 uppercase flex items-center gap-3">
+          <span className="h-[1px] w-6 bg-[#ff3b47]/60" />
+          <span className="drop-shadow-[0_0_6px_rgba(255,255,255,0.3)]">CREATIVE DEVELOPER PORTFOLIO</span>
+          <span className="h-[1px] w-6 bg-[#ff3b47]/60" />
         </div>
       </div>
     </div>

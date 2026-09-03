@@ -163,25 +163,25 @@ export default function AboutExpertise() {
           <div>
             {/* Eyebrow */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.25em] text-[#d97736]">
+              <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.25em] text-[#f59e0b]">
                 01 — ABOUT ME
               </span>
-              <span className="text-[#e28743] text-xs">✦</span>
+              <span className="text-[#f59e0b] text-xs">✦</span>
             </div>
 
             {/* Main Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-[2.75rem] font-serif tracking-tight text-white leading-[1.15] mb-4">
               From Code to Intelligent Systems.<br />
-              I Build. I Create. <span className="text-[#e28743] font-serif italic">I Innovate.</span>
+              I Build. I Create. <span className="text-[#f59e0b] font-serif italic">I Innovate.</span>
             </h2>
 
             {/* Tagline / Subtitle */}
-            <div className="text-xs sm:text-sm font-medium text-[#e6a86c]/90 mb-4 tracking-wide">
+            <div className="text-xs sm:text-sm font-semibold text-[#fcd34d] mb-4 tracking-wide">
               Computer Science Undergraduate &bull; AI &amp; Computer Vision Enthusiast &bull; Full-Stack Developer &bull; Creative Technologist
             </div>
 
             {/* Description */}
-            <p className="text-sm md:text-[15px] text-white/70 leading-relaxed font-light mb-8 max-w-3xl">
+            <p className="text-sm md:text-[15px] text-white/90 leading-relaxed mb-8 max-w-3xl">
               I’m a Computer Science undergraduate at Eastern University, Sri Lanka, passionate about Artificial Intelligence, Computer Vision, and intelligent software solutions. I combine programming, problem-solving, and creative design to build technology that is practical, useful, and impactful.
             </p>
           </div>
@@ -191,26 +191,26 @@ export default function AboutExpertise() {
             {featureCards.map((card, idx) => (
               <div
                 key={idx}
-                className="relative p-5 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 hover:border-[#e28743]/50 transition-all duration-300 group hover:-translate-y-1 shadow-lg hover:shadow-[0_8px_25px_rgba(226,135,67,0.12)] flex flex-col"
+                className="relative p-5 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 hover:border-[#f59e0b]/50 transition-all duration-300 group hover:-translate-y-1 shadow-lg hover:shadow-[0_8px_25px_rgba(245,158,11,0.15)] flex flex-col"
               >
                 {/* Subtle top amber glow */}
-                <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#e28743]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#f59e0b]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Header row with Icon and Step Number */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-11 h-11 rounded-xl border border-[#e28743]/30 bg-[#e28743]/10 shadow-[0_0_15px_rgba(226,135,67,0.15)] flex items-center justify-center text-[#e28743] group-hover:scale-110 group-hover:border-[#e28743]/60 transition-all duration-300">
+                  <div className="w-11 h-11 rounded-xl border border-[#f59e0b]/30 bg-[#f59e0b]/10 shadow-[0_0_15px_rgba(245,158,11,0.15)] flex items-center justify-center text-[#f59e0b] group-hover:scale-110 group-hover:border-[#f59e0b]/60 transition-all duration-300">
                     {card.icon}
                   </div>
-                  <span className="text-[11px] font-oswald text-[#d97736]/70 tracking-wider">
+                  <span className="text-[11px] font-oswald font-bold text-[#f59e0b] tracking-wider">
                     {card.num}
                   </span>
                 </div>
 
-                <h4 className="text-sm font-bold text-white mb-2 group-hover:text-[#e6a86c] transition-colors">
+                <h4 className="text-sm font-bold text-white mb-2 group-hover:text-[#fcd34d] transition-colors">
                   {card.title}
                 </h4>
 
-                <p className="text-xs text-white/60 leading-relaxed font-light">
+                <p className="text-xs text-white/85 leading-relaxed">
                   {card.description}
                 </p>
               </div>
@@ -223,11 +223,11 @@ export default function AboutExpertise() {
       {/* Bottom Section: Expertise That Powers My Work */}
       <div className="flex flex-col mt-4 md:mt-6">
         <div className="text-center mb-8 md:mb-10">
-          <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.25em] text-[#d97736] block mb-2">
+          <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.25em] text-[#f59e0b] block mb-2">
             02 — CORE CAPABILITIES
           </span>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif tracking-tight text-white">
-            Expertise That <span className="text-[#e28743] italic font-serif">Powers</span> My Work
+            Expertise That <span className="text-[#f59e0b] italic font-serif">Powers</span> My Work
           </h3>
         </div>
 
@@ -236,30 +236,30 @@ export default function AboutExpertise() {
           {expertiseCards.map((card, idx) => (
             <div
               key={idx}
-              className="relative p-5 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 hover:border-[#e28743]/50 transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1 shadow-lg hover:shadow-[0_10px_30px_rgba(226,135,67,0.15)] overflow-hidden min-h-[220px]"
+              className="relative p-5 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 hover:border-[#f59e0b]/50 transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1 shadow-lg hover:shadow-[0_10px_30px_rgba(245,158,11,0.15)] overflow-hidden min-h-[220px]"
             >
               {/* Glow Accent */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#e28743]/15 rounded-full blur-xl pointer-events-none group-hover:bg-[#e28743]/30 transition-all duration-500" />
-              <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-[#e28743]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#f59e0b]/15 rounded-full blur-xl pointer-events-none group-hover:bg-[#f59e0b]/30 transition-all duration-500" />
+              <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-[#f59e0b]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div>
                 {/* Icon Container */}
-                <div className="w-11 h-11 rounded-xl border border-[#e28743]/30 bg-[#e28743]/10 shadow-[0_0_15px_rgba(226,135,67,0.15)] flex items-center justify-center text-[#e28743] mb-4 group-hover:scale-110 group-hover:border-[#e28743]/60 transition-all duration-300 relative z-10">
+                <div className="w-11 h-11 rounded-xl border border-[#f59e0b]/30 bg-[#f59e0b]/10 shadow-[0_0_15px_rgba(245,158,11,0.15)] flex items-center justify-center text-[#f59e0b] mb-4 group-hover:scale-110 group-hover:border-[#f59e0b]/60 transition-all duration-300 relative z-10">
                   {card.icon}
                 </div>
 
-                <h4 className="text-sm font-bold text-white mb-2 leading-snug group-hover:text-[#e6a86c] transition-colors relative z-10">
+                <h4 className="text-sm font-bold text-white mb-2 leading-snug group-hover:text-[#fcd34d] transition-colors relative z-10">
                   {card.title}
                 </h4>
 
-                <p className="text-xs text-white/60 leading-relaxed font-light relative z-10">
+                <p className="text-xs text-white/85 leading-relaxed relative z-10">
                   {card.description}
                 </p>
               </div>
 
               {/* Tag indicator */}
               <div className="mt-4 pt-3 border-t border-white/5 relative z-10">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#d97736]/80">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#f59e0b]">
                   {card.tag}
                 </span>
               </div>

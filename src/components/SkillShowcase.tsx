@@ -161,16 +161,16 @@ export default function SkillShowcase() {
               {skillsData[activeIndex].title}
             </h2>
             
-            <p className="text-sm md:text-base text-white/70 leading-relaxed mb-8 md:mb-10">
+            <p className="text-sm md:text-base text-white/90 leading-relaxed mb-8 md:mb-10 font-normal">
               {skillsData[activeIndex].description}
             </p>
 
             <div className="border-t border-white/10 pt-6 md:pt-8">
-              <h4 className="text-[#c22026] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-3 md:mb-4">Mission Objective / Certificate</h4>
+              <h4 className="text-[#ff3b47] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-3 md:mb-4 drop-shadow-[0_0_8px_rgba(255,59,71,0.4)]">Mission Objective / Certificate</h4>
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <div className="font-bold text-sm md:text-lg mb-1 text-white">{skillsData[activeIndex].certificate}</div>
-                  <div className="text-xs text-white/50">Verified Credential</div>
+                  <div className="text-xs text-white/80 font-medium">Verified Credential</div>
                 </div>
                 <div className="text-xs font-bold text-white bg-white/10 px-3 py-1.5 rounded-full border border-white/20 whitespace-nowrap self-start">
                   Year {skillsData[activeIndex].year}

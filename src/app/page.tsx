@@ -6,6 +6,7 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import AboutExpertise from "@/components/AboutExpertise";
 import SkillShowcase from "@/components/SkillShowcase";
 import FloatingNavBar from "@/components/FloatingNavBar";
+import AnimeLoader from "@/components/AnimeLoader";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -63,6 +64,9 @@ export default function Home() {
 
   return (
     <div className="relative w-full font-sans bg-transparent">
+      {/* Anime Preloader Screen */}
+      <AnimeLoader frameCount={frameCount} />
+
       {/* Background Canvas Animation */}
       <canvas
         ref={canvasRef}

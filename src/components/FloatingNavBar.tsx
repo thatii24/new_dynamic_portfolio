@@ -213,7 +213,7 @@ export default function FloatingNavBar() {
         className="hidden md:flex fixed right-4 md:right-7 top-1/2 -translate-y-1/2 z-50 flex-col items-center select-none"
       >
         {/* Main Glass Pill Navigation Bar */}
-        <div className="relative flex flex-col items-center p-2 rounded-full bg-white/70 dark:bg-white/10 backdrop-blur-2xl border border-white/40 dark:border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.25)] transition-all duration-300 gap-2">
+        <div className="relative flex flex-col items-center shadow-[0_8px_32px_rgba(0,0,0,0.25)] transition-all duration-300 gap-2">
           {/* Top Navigation Items */}
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
@@ -227,11 +227,10 @@ export default function FloatingNavBar() {
                 <button
                   onClick={() => scrollToSection(item.id)}
                   aria-label={item.label}
-                  className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 ${
-                    isActive
-                      ? "bg-white text-slate-900 shadow-md scale-105 font-bold"
-                      : "text-slate-800 dark:text-white/80 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
-                  }`}
+                  className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 ${isActive
+                    ? "bg-white text-slate-900 shadow-md scale-105 font-bold"
+                    : "text-slate-800 dark:text-white/80 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
+                    }`}
                 >
                   {item.icon}
                   {isActive && (
@@ -306,11 +305,10 @@ export default function FloatingNavBar() {
                   <button
                     onClick={() => scrollToSection(item.id)}
                     aria-label={item.label}
-                    className={`relative flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${
-                      isActive
-                        ? "bg-white text-slate-900 shadow-md font-bold"
-                        : "text-slate-800 dark:text-white/70 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
-                    }`}
+                    className={`relative flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${isActive
+                      ? "bg-white text-slate-900 shadow-md font-bold"
+                      : "text-slate-800 dark:text-white/70 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
+                      }`}
                   >
                     {item.icon}
                   </button>
@@ -377,19 +375,16 @@ export default function FloatingNavBar() {
           {/* Animated Hamburger / Close Icon */}
           <div className="relative w-6 h-6 flex flex-col justify-center items-center">
             <span
-              className={`block absolute h-0.5 w-6 bg-white rounded-full transform transition-all duration-300 ease-in-out ${
-                isMobileMenuOpen ? "rotate-45" : "-translate-y-2"
-              }`}
+              className={`block absolute h-0.5 w-6 bg-white rounded-full transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "rotate-45" : "-translate-y-2"
+                }`}
             />
             <span
-              className={`block absolute h-0.5 w-6 bg-white rounded-full transform transition-all duration-300 ease-in-out ${
-                isMobileMenuOpen ? "opacity-0 scale-x-0" : "opacity-100"
-              }`}
+              className={`block absolute h-0.5 w-6 bg-white rounded-full transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-x-0" : "opacity-100"
+                }`}
             />
             <span
-              className={`block absolute h-0.5 w-6 bg-white rounded-full transform transition-all duration-300 ease-in-out ${
-                isMobileMenuOpen ? "-rotate-45" : "translate-y-2"
-              }`}
+              className={`block absolute h-0.5 w-6 bg-white rounded-full transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "-rotate-45" : "translate-y-2"
+                }`}
             />
           </div>
         </button>
@@ -407,11 +402,10 @@ export default function FloatingNavBar() {
       {/* Mobile Hidden Menu Popup / Sheet */}
       <aside
         aria-label="Mobile Navigation"
-        className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-sm rounded-3xl bg-[#0e0e0e]/95 backdrop-blur-2xl border border-white/20 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-all duration-300 md:hidden ${
-          isMobileMenuOpen
-            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 scale-95 translate-y-4 pointer-events-none"
-        }`}
+        className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-sm rounded-3xl bg-[#0e0e0e]/95 backdrop-blur-2xl border border-white/20 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-all duration-300 md:hidden ${isMobileMenuOpen
+          ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 scale-95 translate-y-4 pointer-events-none"
+          }`}
       >
         {/* Mobile Header / Profile preview */}
         <div className="flex items-center gap-3 pb-4 border-b border-white/10">
@@ -462,11 +456,10 @@ export default function FloatingNavBar() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`flex items-center justify-between w-full px-3.5 py-2.5 rounded-2xl transition-all duration-200 text-left ${
-                  isActive
-                    ? "bg-[#c22026] text-white font-semibold shadow-md shadow-[#c22026]/30"
-                    : "text-white/80 hover:bg-white/10 hover:text-white"
-                }`}
+                className={`flex items-center justify-between w-full px-3.5 py-2.5 rounded-2xl transition-all duration-200 text-left ${isActive
+                  ? "bg-[#c22026] text-white font-semibold shadow-md shadow-[#c22026]/30"
+                  : "text-white/80 hover:bg-white/10 hover:text-white"
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <span className={`${isActive ? "text-white" : "text-white/70"}`}>
@@ -504,11 +497,10 @@ export default function FloatingNavBar() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center justify-center gap-2 px-3 py-2 rounded-xl border transition-all text-xs font-medium ${
-                    isActive
-                      ? "bg-white text-slate-900 border-white font-semibold shadow-sm"
-                      : "bg-white/5 border-white/10 hover:bg-white/10 text-white/80 hover:text-white"
-                  }`}
+                  className={`flex items-center justify-center gap-2 px-3 py-2 rounded-xl border transition-all text-xs font-medium ${isActive
+                    ? "bg-white text-slate-900 border-white font-semibold shadow-sm"
+                    : "bg-white/5 border-white/10 hover:bg-white/10 text-white/80 hover:text-white"
+                    }`}
                 >
                   {item.icon}
                   <span>{item.label}</span>

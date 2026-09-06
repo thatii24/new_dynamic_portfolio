@@ -14,7 +14,7 @@
   A state-of-the-art, high-performance personal portfolio engineered with <strong>Next.js 16 (App Router)</strong>, <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS v4</strong>. Features interactive 3D map exploration, dynamic project carousels, animated skills ribbons, and an automated freelance inquiry SMTP portal with rate limiting and security defenses.
 </p>
 
-🔗 **Live Production URL:** [https://thatii24.github.io/new_dynamic_portfolio/]((https://thatii24.github.io/new_dynamic_portfolio/))
+🔗 **Live Production URL:** [https://thatii24.github.io/new_dynamic_portfolio/](https://thatii24.github.io/new_dynamic_portfolio/)
 
 </div>
 

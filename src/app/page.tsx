@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AboutExpertise from "@/components/AboutExpertise";
@@ -10,6 +10,7 @@ import AnimeLoader from "@/components/AnimeLoader";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [showTopNav, setShowTopNav] = useState(true);
   const frameCount = 240;
 
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -45,6 +46,10 @@ export default function Home() {
 
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop;
+
+      // Disappear top header as soon as scrolling begins from top
+      setShowTopNav(scrollTop <= 20);
+
       const maxScrollTop =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollFraction = scrollTop / maxScrollTop;
@@ -56,7 +61,7 @@ export default function Home() {
       requestAnimationFrame(() => updateImage(frameIndex));
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     preloadImages();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -77,8 +82,14 @@ export default function Home() {
       {/* Floating Pill Navigation Dock */}
       <FloatingNavBar />
 
-      {/* Top Navbar - Fixed so it stays on all screens */}
-      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-xs uppercase tracking-widest text-white/70 font-semibold pointer-events-none">
+      {/* Top Navbar - Visible in hero division, disappears when scrolling to second division and beyond */}
+      <header
+        className={`fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-xs uppercase tracking-widest text-white/70 font-semibold pointer-events-none transition-all duration-500 ease-in-out ${
+          showTopNav
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+      >
         <div className="flex flex-col pointer-events-auto">
           <span>Web Designer</span>
           <span>Digital Creator</span>

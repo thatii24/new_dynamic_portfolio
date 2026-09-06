@@ -215,7 +215,7 @@ export default function WorldMap() {
       `}} />
 
       {/* Top Header HUD Bar */}
-      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 mb-6 border-b border-white/10 pb-4">
+      <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 border-b border-white/10 pb-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="w-2 h-2 rounded-full bg-[#c22026] animate-ping" />
@@ -223,35 +223,35 @@ export default function WorldMap() {
               Global Telemetry & Nodes
             </span>
           </div>
-          <h2 className="font-oswald text-3xl sm:text-4xl uppercase tracking-wider text-white">
+          <h2 className="font-oswald text-2xl sm:text-3xl md:text-4xl uppercase tracking-wider text-white">
             Worldwide Operations
           </h2>
         </div>
 
         {/* Live HUD Status Counters */}
-        <div className="flex items-center gap-3 sm:gap-6 bg-black/60 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-full text-[11px] uppercase tracking-wider text-white/70">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5 sm:gap-4 md:gap-6 bg-black/60 backdrop-blur-xl border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-[11px] uppercase tracking-wider text-white/70 self-stretch sm:self-auto justify-between sm:justify-start">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
             <span>Nodes: <strong className="text-white">6 Active</strong></span>
           </div>
-          <div className="hidden sm:flex items-center gap-2 border-l border-white/10 pl-4">
+          <div className="flex items-center gap-1.5 sm:gap-2 border-l border-white/10 pl-2.5 sm:pl-4">
             <span>Ping: <strong className="text-emerald-400">18ms</strong></span>
           </div>
-          <div className="flex items-center gap-2 border-l border-white/10 pl-4">
-            <span className="text-[#c22026]">{time || "LIVE"}</span>
+          <div className="flex items-center gap-1.5 sm:gap-2 border-l border-white/10 pl-2.5 sm:pl-4">
+            <span className="text-[#c22026] font-mono">{time || "LIVE"}</span>
           </div>
         </div>
       </div>
 
       {/* Region Selector Filter Pills */}
-      <div className="w-full flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-3 mb-4 scrollbar-none">
+      <div className="w-full flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2 overflow-x-auto pb-2.5 mb-3 sm:mb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {locations.map((loc) => {
           const isSelected = activeId === loc.id;
           return (
             <button
               key={loc.id}
               onClick={() => setActiveId(loc.id)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all duration-300 border ${
+              className={`px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all duration-300 border shrink-0 ${
                 isSelected
                   ? "bg-[#c22026] text-white border-[#c22026] shadow-[0_0_20px_rgba(194,32,38,0.5)] scale-105"
                   : "bg-white/[0.03] text-white/60 border-white/10 hover:border-white/30 hover:text-white"
@@ -264,13 +264,13 @@ export default function WorldMap() {
       </div>
 
       {/* Main Interactive Vector Map Stage */}
-      <div className="relative w-full aspect-[16/9] min-h-[380px] sm:min-h-[480px] md:min-h-[580px] bg-[#070709] rounded-2xl md:rounded-3xl border border-white/10 overflow-hidden shadow-2xl flex items-center justify-center">
+      <div className="relative w-full aspect-[2/1] bg-[#070709] rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 overflow-hidden shadow-2xl flex items-center justify-center">
         
         {/* Background Digital Grid Matrix */}
         <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         {/* Ambient Gradient Center Glow */}
-        <div className="absolute w-[600px] h-[350px] bg-[#c22026]/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute w-[80%] h-[80%] max-w-[600px] max-h-[350px] bg-[#c22026]/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
 
         {/* Vector SVG World Map + Dynamic Arc Layer */}
         <svg
@@ -463,7 +463,7 @@ export default function WorldMap() {
             <div
               key={loc.id}
               style={{ top: `${loc.y}%`, left: `${loc.x}%` }}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 z-30 cursor-pointer group"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 z-30 cursor-pointer group p-2 -m-2 touch-manipulation"
               onClick={() => setActiveId(loc.id)}
               onMouseEnter={() => setHoveredId(loc.id)}
               onMouseLeave={() => setHoveredId(null)}
@@ -471,23 +471,23 @@ export default function WorldMap() {
               {/* Outer Sonar Ping Rings on Active */}
               {isActive && (
                 <>
-                  <span className="absolute -inset-3 rounded-full bg-[#c22026]/40 animate-ping pointer-events-none" />
-                  <span className="absolute -inset-6 rounded-full border border-[#c22026]/30 animate-pulse pointer-events-none" />
+                  <span className="absolute inset-0 m-auto w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-[#c22026]/40 animate-ping pointer-events-none" />
+                  <span className="absolute inset-0 m-auto w-8 h-8 sm:w-12 sm:h-12 rounded-full border border-[#c22026]/30 animate-pulse pointer-events-none" />
                 </>
               )}
 
               {/* Pin Core */}
               <div
-                className={`relative w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
+                className={`relative w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                   isActive
-                    ? "bg-[#c22026] text-white shadow-[0_0_25px_#c22026] scale-125 ring-2 ring-white/60"
+                    ? "bg-[#c22026] text-white shadow-[0_0_25px_#c22026] scale-125 ring-1 sm:ring-2 ring-white/60"
                     : isHovered
                     ? "bg-white text-black scale-115 shadow-[0_0_15px_rgba(255,255,255,0.8)]"
                     : "bg-black/90 border border-white/50 text-white/80 hover:border-white"
                 }`}
               >
                 <div
-                  className={`w-2 h-2 rounded-full transition-colors ${
+                  className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${
                     isActive ? "bg-white" : isHovered ? "bg-[#c22026]" : "bg-white/80"
                   }`}
                 />
@@ -495,7 +495,7 @@ export default function WorldMap() {
 
               {/* Pin Hover Name Label */}
               <div
-                className={`absolute left-1/2 -translate-x-1/2 top-7 px-2.5 py-1 rounded-md bg-black/90 backdrop-blur-md border border-white/20 text-[10px] uppercase font-bold tracking-widest whitespace-nowrap pointer-events-none transition-all duration-200 ${
+                className={`hidden sm:block absolute left-1/2 -translate-x-1/2 top-7 px-2.5 py-1 rounded-md bg-black/90 backdrop-blur-md border border-white/20 text-[10px] uppercase font-bold tracking-widest whitespace-nowrap pointer-events-none transition-all duration-200 ${
                   isActive
                     ? "text-[#c22026] border-[#c22026]/60 shadow-[0_0_10px_rgba(194,32,38,0.4)] opacity-100"
                     : isHovered
@@ -511,43 +511,43 @@ export default function WorldMap() {
       </div>
 
       {/* Selected Location / Project HUD Detail Drawer */}
-      <div className="w-full mt-6 bg-black/60 backdrop-blur-2xl border border-white/10 p-6 sm:p-8 rounded-2xl md:rounded-3xl shadow-2xl flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-        <div className="flex flex-col max-w-2xl">
-          <div className="flex flex-wrap items-center gap-3 mb-2">
+      <div className="w-full mt-4 sm:mt-6 bg-black/60 backdrop-blur-2xl border border-white/10 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5 sm:gap-6">
+        <div className="flex flex-col w-full lg:max-w-2xl">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
             <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#c22026]/20 border border-[#c22026]/40 text-[#c22026]">
               {activeLoc.region}
             </span>
-            <span className="text-xs uppercase tracking-widest text-white/40 font-mono">
+            <span className="text-[11px] sm:text-xs uppercase tracking-widest text-white/40 font-mono">
               LAT: {activeLoc.lat} | LNG: {activeLoc.lng}
             </span>
-            <span className="text-xs uppercase tracking-widest text-emerald-400 font-semibold">
+            <span className="text-[11px] sm:text-xs uppercase tracking-widest text-emerald-400 font-semibold">
               ● {activeLoc.project.highlight}
             </span>
           </div>
 
-          <div className="flex items-baseline gap-3">
-            <span className="text-3xl sm:text-4xl font-oswald text-[#c22026]">
+          <div className="flex items-baseline gap-2 sm:gap-3">
+            <span className="text-2xl sm:text-3xl md:text-4xl font-oswald text-[#c22026]">
               {activeLoc.project.num}
             </span>
-            <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider text-white">
               {activeLoc.project.title}
             </h3>
           </div>
 
-          <p className="text-xs uppercase tracking-widest text-white/50 mb-3">
+          <p className="text-[11px] sm:text-xs uppercase tracking-widest text-white/50 mb-2 sm:mb-3">
             Client: {activeLoc.project.client} &bull; {activeLoc.project.category} ({activeLoc.project.year})
           </p>
 
-          <p className="text-sm text-white/70 leading-relaxed max-w-xl">
+          <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-xl">
             {activeLoc.project.desc}
           </p>
 
           {/* Tech stack badges */}
-          <div className="flex flex-wrap gap-2 mt-4">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
             {activeLoc.project.tech.map((t, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-[10px] uppercase tracking-wider text-white/70"
+                className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded bg-white/5 border border-white/10 text-[9px] sm:text-[10px] uppercase tracking-wider text-white/70"
               >
                 {t}
               </span>
@@ -556,10 +556,10 @@ export default function WorldMap() {
         </div>
 
         {/* Right Action Callout */}
-        <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+        <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 sm:gap-3 w-full lg:w-auto shrink-0">
           <Link
             href="/contact"
-            className="px-6 py-3.5 bg-[#c22026] hover:bg-[#a5191e] text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all duration-300 shadow-[0_0_25px_rgba(194,32,38,0.4)] flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto lg:w-full px-5 sm:px-6 py-3 sm:py-3.5 bg-[#c22026] hover:bg-[#a5191e] text-white text-[11px] sm:text-xs font-bold uppercase tracking-widest rounded-xl transition-all duration-300 shadow-[0_0_25px_rgba(194,32,38,0.4)] flex items-center justify-center gap-2 group text-center"
           >
             <span>Initiate Project in {activeLoc.name}</span>
             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -567,7 +567,7 @@ export default function WorldMap() {
 
           <Link
             href="/"
-            className="px-6 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/80 text-xs font-bold uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto lg:w-full px-5 sm:px-6 py-3 sm:py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/80 text-[11px] sm:text-xs font-bold uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-center"
           >
             Explore All Projects
           </Link>

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-new--dynamic--portfolio--k7oiskd7a.vercel.app-c22026?style=for-the-badge&logo=vercel&logoColor=white)](https://new-dynamic-portfolio-k7oiskd7a.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-thatii24.github.io/new_dynamic_portfolio/-c22026?style=for-the-badge&logo=vercel&logoColor=white)](https://thatii24.github.io/new_dynamic_portfolio/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -14,7 +14,7 @@
   A state-of-the-art, high-performance personal portfolio engineered with <strong>Next.js 16 (App Router)</strong>, <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS v4</strong>. Features interactive 3D map exploration, dynamic project carousels, animated skills ribbons, and an automated freelance inquiry SMTP portal with rate limiting and security defenses.
 </p>
 
-🔗 **Live Production URL:** [https://new-dynamic-portfolio-k7oiskd7a.vercel.app/](https://new-dynamic-portfolio-k7oiskd7a.vercel.app/)
+🔗 **Live Production URL:** [https://thatii24.github.io/new_dynamic_portfolio/]((https://thatii24.github.io/new_dynamic_portfolio/))
 
 </div>
 

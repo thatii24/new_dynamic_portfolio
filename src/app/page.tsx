@@ -7,6 +7,11 @@ import AboutExpertise from "@/components/AboutExpertise";
 import SkillShowcase from "@/components/SkillShowcase";
 import FloatingNavBar from "@/components/FloatingNavBar";
 import AnimeLoader from "@/components/AnimeLoader";
+import InteractiveTechStack from "@/components/InteractiveTechStack";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import ServiceOfferings from "@/components/ServiceOfferings";
+import TestimonialMarquee from "@/components/TestimonialMarquee";
+import LiveStatusConnect from "@/components/LiveStatusConnect";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -130,7 +135,7 @@ export default function Home() {
                   Available Worldwide
                 </div>
 
-                {/* Horizontal Social and Platform Links (Clean, unboxed & larger) */}
+                {/* Horizontal Social and Platform Links */}
                 <div className="flex items-center gap-3.5 sm:gap-4.5 text-white/90">
                   <a
                     href="https://facebook.com"
@@ -207,7 +212,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Stats - Horizontal on mobile, vertical column on desktop */}
+            {/* Right Stats */}
             <div className="flex flex-row md:flex-col items-center justify-between sm:justify-around md:justify-end gap-3 sm:gap-6 md:gap-12 w-full md:w-auto pt-6 md:pt-0 border-t md:border-t-0 border-white/10 text-left md:text-right">
               <div className="flex flex-col sm:flex-row md:flex-row items-center justify-center md:justify-end gap-1 sm:gap-3 md:gap-4 text-center sm:text-left">
                 <span className="text-4xl sm:text-5xl md:text-6xl font-oswald text-[#ff3b47] leading-none drop-shadow-[0_0_15px_rgba(255,59,71,0.4)]">3+</span>
@@ -248,12 +253,37 @@ export default function Home() {
           <AboutExpertise />
         </section>
 
-        {/* Section 4: Skill Showcase */}
+        {/* Section 4: Interactive Tech Matrix (NEW) */}
+        <section id="tech-stack" className="w-full py-16 sm:py-20 md:py-24 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <InteractiveTechStack />
+        </section>
+
+        {/* Section 5: Experience & Milestones Timeline (NEW) */}
+        <section id="timeline" className="w-full py-16 sm:py-20 md:py-24 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <ExperienceTimeline />
+        </section>
+
+        {/* Section 6: Skill Showcase */}
         <section id="skills" className="w-full min-h-screen py-20 sm:py-24 md:py-28 flex flex-col justify-center px-6 md:px-12 snap-center">
           <SkillShowcase />
         </section>
 
-        {/* Section 5: Footer */}
+        {/* Section 7: Client Endorsements & Reviews (NEW) */}
+        <section id="testimonials" className="w-full py-16 sm:py-20 md:py-24 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <TestimonialMarquee />
+        </section>
+
+        {/* Section 8: Service Offerings & Packages (NEW) */}
+        <section id="services" className="w-full py-16 sm:py-20 md:py-24 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <ServiceOfferings />
+        </section>
+
+        {/* Section 9: Live Status & Fast Connect (NEW) */}
+        <section id="status-connect" className="w-full py-12 sm:py-16 flex flex-col justify-center px-6 md:px-12 snap-center">
+          <LiveStatusConnect />
+        </section>
+
+        {/* Section 10: Footer */}
         <section id="contact" className="w-full min-h-[70vh] py-20 sm:py-24 md:py-28 flex flex-col justify-center px-6 md:px-12 snap-center">
           <footer className="w-full flex flex-col md:flex-row justify-between items-center bg-black/40 backdrop-blur-xl border border-white/10 p-8 sm:p-10 rounded-2xl md:rounded-sm gap-8 sm:gap-12">
             <div className="flex flex-col w-full md:w-auto">

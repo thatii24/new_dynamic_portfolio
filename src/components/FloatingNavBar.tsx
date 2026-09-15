@@ -228,8 +228,8 @@ export default function FloatingNavBar() {
                   onClick={() => scrollToSection(item.id)}
                   aria-label={item.label}
                   className={`relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 ${isActive
-                    ? "bg-white text-slate-900 shadow-md scale-105 font-bold"
-                    : "text-slate-800 dark:text-white/80 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
+                      ? "bg-white text-slate-900 shadow-md scale-105 font-bold"
+                      : "text-slate-800 dark:text-white/80 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
                     }`}
                 >
                   {item.icon}
@@ -306,8 +306,8 @@ export default function FloatingNavBar() {
                     onClick={() => scrollToSection(item.id)}
                     aria-label={item.label}
                     className={`relative flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${isActive
-                      ? "bg-white text-slate-900 shadow-md font-bold"
-                      : "text-slate-800 dark:text-white/70 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
+                        ? "bg-white text-slate-900 shadow-md font-bold"
+                        : "text-slate-800 dark:text-white/70 hover:bg-white/40 dark:hover:bg-white/20 hover:text-white hover:scale-105"
                       }`}
                   >
                     {item.icon}
@@ -403,8 +403,8 @@ export default function FloatingNavBar() {
       <aside
         aria-label="Mobile Navigation"
         className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-sm rounded-3xl bg-[#0e0e0e]/95 backdrop-blur-2xl border border-white/20 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-all duration-300 md:hidden ${isMobileMenuOpen
-          ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 scale-95 translate-y-4 pointer-events-none"
+            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 scale-95 translate-y-4 pointer-events-none"
           }`}
       >
         {/* Mobile Header / Profile preview */}
@@ -457,8 +457,8 @@ export default function FloatingNavBar() {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`flex items-center justify-between w-full px-3.5 py-2.5 rounded-2xl transition-all duration-200 text-left ${isActive
-                  ? "bg-[#c22026] text-white font-semibold shadow-md shadow-[#c22026]/30"
-                  : "text-white/80 hover:bg-white/10 hover:text-white"
+                    ? "bg-[#c22026] text-white font-semibold shadow-md shadow-[#c22026]/30"
+                    : "text-white/80 hover:bg-white/10 hover:text-white"
                   }`}
               >
                 <div className="flex items-center gap-3">
@@ -498,8 +498,8 @@ export default function FloatingNavBar() {
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`flex items-center justify-center gap-2 px-3 py-2 rounded-xl border transition-all text-xs font-medium ${isActive
-                    ? "bg-white text-slate-900 border-white font-semibold shadow-sm"
-                    : "bg-white/5 border-white/10 hover:bg-white/10 text-white/80 hover:text-white"
+                      ? "bg-white text-slate-900 border-white font-semibold shadow-sm"
+                      : "bg-white/5 border-white/10 hover:bg-white/10 text-white/80 hover:text-white"
                     }`}
                 >
                   {item.icon}

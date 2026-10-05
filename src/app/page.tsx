@@ -112,7 +112,7 @@ export default function Home() {
         <section id="hero" className="relative w-full min-h-screen py-24 sm:py-28 md:py-32 flex flex-col justify-center px-6 md:px-12 snap-center">
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full gap-10 md:gap-12 mt-8 md:mt-12">
             {/* Left Content */}
-            <div className="flex flex-col max-w-md">
+            <div className="flex flex-col max-w-md -ml-2 md:-ml-6">
               <span className="font-serif italic text-3xl md:text-5xl text-white/90 mb-2">
                 Hello, I&apos;m
               </span>
